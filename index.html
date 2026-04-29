@@ -282,7 +282,7 @@ function showResult() {
 }
 
 async function saveToSheets(name, phone, email, score, pct, cat) {
-  const SHEET_URL = 'https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec';
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyajj91rkHVvqmLxsUe65Yc2ZlLdSJuyqtDRMWn2yvb1LmQOF50M09heE2jdVwbJlAWvw/exec';
   try {
     await fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, phone, email, score, percentage: pct + '%', category: cat, date: new Date().toLocaleString('ar-SA') }) });
     document.getElementById('save-badge').style.display = 'block';
